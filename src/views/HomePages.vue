@@ -88,7 +88,7 @@
 
 <section class="section-contacto">
     <div class="contenedor-contacto">
-          <h2>Contactanos</h2>
+          <h2>Ubicacion</h2>
         <div class="contactos-lista">
             
         </div>

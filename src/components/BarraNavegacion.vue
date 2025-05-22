@@ -21,7 +21,7 @@
             <ul>
                 <li class="boton-menu"><router-link to="/" @click="toggleMenu"><i class="bi bi-house"></i>Inicio</router-link></li>
                 <li class="boton-menu"><router-link to="/menu" @click="toggleMenu"><i class="bi bi-fork-knife"></i>Menu</router-link></li>
-                <li class="boton-menu"><a href="#"><i class="bi bi-telephone"></i>Contacto</a></li>
+                <li class="boton-menu"><router-link to="/contacto" @click="toggleMenu"><i class="bi bi-telephone"></i>Contacto</router-link></li>
             </ul>
         </div>
         <div v-if="menuAbierto" class="overlay" @click="toggleMenu"></div>
