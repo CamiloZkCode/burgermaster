@@ -127,7 +127,7 @@ export default {
     margin: 2rem 0;
 }
 .boton-menu i {
-    margin-right: 1rem;
+    margin-right: 1.5rem;
     color: var(--color-acento);
 }
 .boton-menu a {
