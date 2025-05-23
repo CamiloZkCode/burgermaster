@@ -20,7 +20,6 @@
       <div class="slider" :style="{ transform: `translateX(-${categoriaActiva * 100}%)` }">
         <section v-for="(categoria, index) in categorias" :key="index" class="slide">
           <h2>{{ categoria }}</h2>
-          <!-- Aquí iría tu contenido -->
         </section>
       </div>
     </main>
@@ -181,6 +180,5 @@ export default {
   flex-shrink: 0;
   padding: 1rem;
 }
-
 
 </style>

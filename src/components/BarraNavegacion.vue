@@ -42,7 +42,6 @@ export default {
         }
     }
 };
-/*codigo js*/
 
 </script>
 
