@@ -51,63 +51,39 @@
 </template>
 
 <script>
-import emailjs from 'emailjs-com';
+import axios from "axios";
 
 export default {
-  name: "ContactoPages",
   data() {
     return {
       formData: {
         name: "",
         email: "",
         phone: "",
-        message: ""
+        message: "",
       },
       loading: false,
-      error: null,
-      showModal: false
+      showModal: false,
     };
-  },
-  mounted() {
-    emailjs.init('aLLW6NtjL_Xivl8c8');
   },
   methods: {
     async submitSupport() {
-      if (!this.formData.name || !this.formData.email || !this.formData.message) {
-        this.error = "Por favor complete los campos obligatorios";
-        return;
-      }
-
       this.loading = true;
-      this.error = null;
-
       try {
-        await emailjs.send(
-          'service_ghxccd9',
-          'template_ofnxskv',
-          {
-            name: this.formData.name.trim(),
-            email: this.formData.email.trim(),
-            phone: this.formData.phone.trim(),
-            message: this.formData.message.trim(),
-            reply_to: this.formData.email.trim()
-          }
-        );
-
+        await axios.post("http://localhost:3000/api/contact", this.formData);
         this.showModal = true;
         this.formData = { name: "", email: "", phone: "", message: "" };
-
       } catch (error) {
-        this.error = "Error al enviar el mensaje. Por favor intente nuevamente.";
-        console.error("Error al enviar:", error);
+        console.error("Error al enviar mensaje:", error);
+        alert("Ocurrió un error al enviar tu mensaje. Intenta nuevamente.");
       } finally {
         this.loading = false;
       }
     },
     closeModal() {
       this.showModal = false;
-    }
-  }
+    },
+  },
 };
 </script>
 
