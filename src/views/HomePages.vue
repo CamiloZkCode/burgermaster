@@ -86,14 +86,24 @@
     </div>
 </section>
 
-<section class="section-contacto">
-    <div class="contenedor-contacto">
-          <h2>Ubicacion</h2>
-        <div class="contactos-lista">
-            
-        </div>
+<section class="section-contacto"> 
+  <div class="contenedor-contacto">
+    <h2>Ubicación</h2>
+    <p>Nos encontramos en: <strong>Honda</strong></p>
+
+    <div class="mapa-ubicacion">
+      <iframe 
+       src="https://www.google.com/maps/embed?pb=!4v1747974322442!6m8!1m7!1sFx1NCN6-8CWJL1PoWICXww!2m2!1d5.198577036482368!2d-74.74918445811564!3f309.3292623841138!4f-9.147733547906455!5f0.7820865974627469"  
+        width="100%" 
+        height="300" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
     </div>
+  </div>
 </section>
+
 
 </template>
 
@@ -201,6 +211,20 @@ html, body {
   min-height: 500px; /* o lo que necesites */
   box-sizing: border-box;
 }
+.contenedor-contacto {
+  width: 100%;
+  max-width: 1200px; /* antes estaba en 800px */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mapa-ubicacion iframe {
+  width: 100%;
+  height: 400px; /* lo agrandé un poco también */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
 
 .contenedor-productos {
   margin: 0 auto;
